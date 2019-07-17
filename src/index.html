@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zip</title>
+</head>
+
+<body class="body">
+  <div class="content">
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <h1 class="logo__text">Wg.</h1>
+        </div>
+
+        <h2 class="container__title">Be sure you put your feet</h2>
+
+        <h2 class="container__subtitle">in the right place</h2>
+
+        <div class="zip">
+          <input class="zip__input" type="text" placeholder="Enter your zip.">
+
+          <img class="zip__img" src="../dist/images/Zip_images.png" alt="Zip image">
+
+          <p class="zip__text">This is Photoshop's version of Lorem Ipsum.</p>
+
+          <button class="zip__button">Press me</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="boxes">
+      <div class="container">
+        <div class="row">
+          <div class="document">
+            <div class="box-content">
+              <img class="box-content__img" src="../dist/images/boxes_document_img.png" alt="Document">
+
+              <h2 class="box-content__title">Documents</h2>
+
+              <p class="box-content__text">
+                This is Photoshop's version of Lorem Ipsum. Proin
+                gravida nibh vel velit auctor aliquet. Aenean sollictudin
+              </p>
+            </div>
+          </div>
+
+          <div class="photo">
+            <div class="box-content">
+              <img class="box-content__img" src="../dist/images/boxes_photo_img.png" alt="Photo">
+
+              <h2 class="box-content__title">Photo</h2>
+
+              <p class="box-content__text">
+                This is Photoshop's version of Lorem Ipsum. Proin
+                gravida nibh vel velit auctor aliquet. Aenean sollictudin
+              </p>
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec1">
+        <div class="container">
+          <h2 class="sec1__title">This is a Heading</h2>
+          <p class="sec1__text1">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+            aliquet.
+            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </p>
+          <p class="sec1__text2">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed
+            non mauris vitae erat
+            consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed
+            non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum
+            feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+        </div>
+      </div>
+
+      <div class="sec2">
+        <div class="container container_justify">
+          <img class="sec2__img" src="../src/assets/images/lap.png" alt="laptop">
+
+          <div class="content">
+            <h2 class="content__title">This is a Heading</h2>
+
+            <p class="content__text">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+              Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum
+              sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam
+              pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque.
+              Suspendisse in orci enim.</p>
+
+            <button class="content__btn">Download</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="map"></div>
+      
+      <div class="form-block">
+        <form action="" class="form">
+          <input class="form__text" type="text" placeholder="Name" name="name">
+          <input class="form__email" type="email" placeholder="Email" name="email address">
+          <textarea class="form__textarea" name="text" cols="30" rows="5" placeholder="Message"></textarea>
+          <button class="form__btn">✔</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      var uluru = {
+        lat: -25.344,
+        lng: 131.036
+      };
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementsByClassName('map')[0], {
+          zoom: 10,
+          center: uluru
+        });
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCWn91bSIrM6opXdu-jwgNiCoQ6WFC2MU&callback=initMap"></script>
+</body>
+
+</html>

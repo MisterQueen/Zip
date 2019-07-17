@@ -1,0 +1,517 @@
+@import "smart-grid.scss";
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Roboto:400,700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  background: #313131;
+}
+
+
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+
+  &__title {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 65px;
+    color: #ffff;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 35px;
+    color: #ffff;
+    text-transform: uppercase;
+  }
+  &_justify{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.header {
+  padding: 50px 0 296px;
+  position: relative;
+  text-align: center;
+  background: url("../../dist/images/Header_bg.png") fixed center;
+  background-size: cover;
+
+  .logo {
+    width: 272px;
+    height: 272px;
+    border-radius: 50%;
+    background: #000;
+    margin: 0 auto;
+    margin-bottom: 75px;
+    color: #fff;
+
+    &__text {
+      font-size: 80px;
+      line-height: 272px;
+      font-weight: lighter;
+      font-family: 'Dancing Script', cursive;
+    }
+  }
+
+  .zip {
+    width: 336px;
+    height: 334px;
+    position: absolute;
+    border: 1px solid gray;
+    background: #ffff;
+    padding: 29px 0;
+    box-sizing: border-box;
+    left: calc(50% - 168px);
+    top: 575px;
+
+    &__input {
+      width: 80%;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #a4a4a4;
+      margin-bottom: 30px;
+      margin-left: 10%;
+
+      &::placeholder {
+        color: gray;
+      }
+    }
+
+    &__img {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    &__text {
+      color: gray;
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    &__button {
+      border: none;
+      background: #227dd3;
+      color: #ffff;
+      padding: 10px 40px;
+      font-size: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        background: darken(#227dd3, 20%);
+      }
+    }
+  }
+}
+
+.boxes {
+  background: #fff;
+  padding: 165px 0 106px;
+
+  .row {
+    @include row-flex();
+    @include md(justify-content, center);
+    margin: 0 15px;
+
+    .document {
+      @include col();
+      @include size(6);
+      @include size-md(8);
+      @include size-xs(12);
+      margin-bottom: 20px;
+
+    }
+
+    .photo {
+      @include col();
+      @include size(6);
+      @include size-md(8);
+      @include size-xs(12);
+
+
+    }
+
+    .box-content {
+      width: 100%;
+
+      &__img {
+        float: left;
+        margin-right: 20px;
+
+      }
+
+      &__title {
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.section {
+  position: relative;
+  height: 1350px;
+
+  .sec1 {
+    background: url(../assets/images/Sec1.png) rgb(95, 193, 139) no-repeat;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-position: calc(50% - 150px) 85px;
+    top: 0;
+    color: #fff;
+    height: 920px;
+    padding-top: 270px;
+    box-sizing: border-box;
+
+
+    &__title {
+      line-height: 60px;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 39px;
+    }
+
+    &__text1 {
+      font-size: 16px;
+      text-align: left;
+      margin-bottom: 50px;
+    }
+  }
+
+  .sec2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 860px;
+    z-index: 2;
+    background: url(../assets/images/Sec2.png) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding-top: 335px;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    &__img{
+      position: absolute;
+      left: 0;
+      top: 350px;
+    }
+
+    .content{
+      width: 550px;
+      color: #fff;
+      text-align: left;
+      
+        &__title{
+          margin-bottom: 30px;
+          font-size: 39px;
+        }
+
+        &__text{
+          font-size: 15.77px;
+          margin-bottom: 45px;
+        }
+
+        &__btn{
+          padding: 10px 20px;
+          color: #fff;
+          border: 3px solid white;
+          border-radius: 4px;
+          background: unset;
+          font-size: 27.35px;
+          font-family: "OpenSans";
+        }
+    }
+  }
+}
+
+.contact {
+  height: 630px;
+  position: relative;
+
+  .map {
+    height: 100%;
+    width: 100%;
+     
+  }
+
+  .form-block{
+    width: 472px;
+    height: 472px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 160px;
+    left: calc(50% - 236px);
+    padding: 110px 0 0;
+    box-sizing: border-box;
+    opacity: 0.851;
+    
+
+    .form{
+      &__text{
+        display: block;
+        margin: 0 auto;
+        height: 33px;
+        width: 277px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 1px;
+        margin-bottom: 13px;
+        border: 1px solid lightgray;
+
+        &::placeholder{
+          color: gray;
+        }
+      }
+
+      &__email{
+        display: block;
+        margin: 0 auto;
+        height: 33px;
+        width: 277px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 1px;
+        margin-bottom: 13px;
+        border: 1px solid lightgray;
+
+        &::placeholder{
+          color: gray;
+        }
+      }
+
+      &__textarea{
+        display: block;
+        margin: 0 auto;
+        height: 82px;
+        width: 277px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 1px;
+        margin-bottom: 33px;
+        resize: none;
+        border: 1px solid lightgray;
+
+
+        &::placeholder{
+          color: gray;
+        }
+      }
+
+      &__btn{
+        background: #43a06d;
+        width: 66px;
+        height: 67px;
+        font-size: 30px;
+        border: none;
+        color: #fff;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 1400px) {
+  .body {
+    .content {
+      margin-left: calc(50% - 700px);
+    }
+  }
+}
+
+@media screen and(max-width: 1140px) {
+  .section{
+    .sec2{
+      &__img{
+        width: 450px;
+      }
+
+      .content{
+        width: 450px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+
+  .container{
+    padding: 20px;
+
+      &_justify{
+        display: flex;
+        justify-content: center;
+      }
+  }
+
+  .section{
+    height: 1250px;
+
+    .sec2{
+      height: 650px;
+      padding-top: 275px;
+
+      &__img{
+        display: none;
+      }
+
+      .content{
+        width: 100%;
+        text-align: center;
+
+          &__btn{
+            display: block;
+            margin: 0 auto;
+          }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px){
+  .section{
+    .sec2{
+      padding-top: 225px;
+    }
+  }
+}
+
+@media screen and(max-width: 576px){
+
+  .container{
+    padding: 0 10px;
+
+    &__title{
+      font-size: 20px
+    }
+
+    &__subtitle{
+      font-size: 29px;
+    }
+  }
+
+  .header{
+  .logo{
+    width: 150px;
+    height: 150px;
+
+      &__text{
+        line-height: 150px;
+      }
+  }
+
+  .zip{
+    top: 450px;
+    width: 100%;
+    max-width: 300px;
+    left: calc(50% - 150px);
+
+      &__input{
+        display: block;
+        margin: 0 auto 30px;
+      }
+  }
+  }
+
+  .boxes{
+    .row{
+      margin: 0;
+
+      .document{
+        margin: 0 0 40px;
+        width: 100%;
+
+      }
+
+      .photo{
+        margin: 0;
+        width: 100%;
+      }
+
+      .box-content{
+        &__img{
+          height: 160px;
+          width: 115px;
+        }
+      }
+    }
+  }
+
+  .section{
+    height: 1470px;
+
+    .sec1{
+      height: 990px;
+
+        &__title{
+          font-size: 30px
+        }
+
+        &__text1{
+          text-align: center;
+        }
+
+        &__text2{
+          text-align: center;
+        }
+    }
+
+    .sec2{
+      height: 700px;
+      
+      .content{
+        &__title{
+          font-size: 30px
+        }
+      }
+    }
+  }
+
+  .contact{
+    .form-block{
+      width: 300px;
+      height: 300px;
+      padding: 30px 0;
+      left: calc(50% - 150px);
+
+      .form{
+        &__text{
+          width: 150px;
+          margin-bottom: 8px;
+        }
+        &__email{
+          width: 150px;
+          margin-bottom: 8px;
+        }
+        &__textarea{
+          width: 200px;
+          margin-bottom: 20px;
+          height: 100px;
+          text-align: center;
+        }
+        &__btn{
+          width: 50px;
+          height: 50px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
